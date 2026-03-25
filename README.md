@@ -11,8 +11,6 @@ Built to solve a real problem: automatically sorting a 3.4 million file personal
 This system scans large directories, classifies files using embeddings + LLMs, and organizes them into structured categories.
 
 It is designed for scale, efficiency, and reliability.
-
-arxiv_harvester.py <---------this is a script to go online and download scientific technical papers to go in the library
 ---
 
 ## 🔥 Core Features
@@ -135,4 +133,6 @@ flowchart TD
 4. Files are organized into structured folders  
 5. Recoll indexes the library  
 6. Frontend retrieves + ranks results  
-7. AI generates answers using real context  
+7. AI generates answers using real context
+
+arxiv_harvester.py <---------this is a script to go online and download scientific technical papers to go in the library
