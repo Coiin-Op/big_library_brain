@@ -128,3 +128,12 @@ flowchart TD
 
     P --> Q[💬 Answer + Sources]
 ```
+### Flow Summary
+
+1. Files are scanned and embedded  
+2. High-confidence matches are auto-classified  
+3. Low-confidence files are routed to LLMs  
+4. Files are organized into structured folders  
+5. Recoll indexes the library  
+6. Frontend retrieves + ranks results  
+7. AI generates answers using real context  
