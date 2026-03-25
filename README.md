@@ -22,3 +22,5 @@ I’m sharing this to help the next person trying to clean up a massive, unorgan
 1. Configure paths in the script
 2. Start LM Studio
 3. Run: python scan_and_sort_main.py
+
+(I added a bunch of my older and backup search files so you can mix and match to use whatever you want to make it yours.)
