@@ -11,8 +11,12 @@ It automatically:
 - extracts snippets from files (start, middle, end for better accuracy)
 - generates embeddings for classification
 - uses LLMs for fallback categorization
-- detects duplicates
 - organizes files into structured folders
+- Async + batched processing
+- Cost-optimized AI usage
+- Duplicate detection
+- Resume-safe execution
+- Local LLM + embeddings support
 
 Designed for large-scale libraries (100k+ files) where manual sorting is not practical.
 
