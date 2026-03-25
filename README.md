@@ -1,10 +1,14 @@
-This is a project to catalogue and sort a 3.4 million file personal text library.
+# Large-Scale Library Sorter & AI Query System
+
+This project was built to catalogue and sort a 3.4 million file personal text library.
 
 I built it to solve a real problem: organizing a massive, unstructured collection without having to manually sort everything.
 
+## Features
+
 It automatically:
 - scans large directories
-- extracts snippets from files
+- extracts snippets from files (start, middle, end for better accuracy)
 - generates embeddings for classification
 - uses LLMs for fallback categorization
 - detects duplicates
@@ -12,15 +16,52 @@ It automatically:
 
 Designed for large-scale libraries (100k+ files) where manual sorting is not practical.
 
-I’m sharing this to help the next person trying to clean up a massive, unorganized library so they don’t have to repeat the same trial-and-error process.
+---
+
+## Main Script
+
+Use this file to run the sorter:
+
+- `scan_and_sort_main_v2.5`  ← **current main version**
+
+ChatGPT was used extensively during this project for debugging, design iteration, and refining the overall pipeline.
+
+## Script Evolution (for reference / experimentation)
+
+These are older or experimental versions if you want to explore or modify behavior:
+
+- book_sorter_v3 (earliest saved version)
+- book_sorter_v9 (best of first-gen scripts)
+- scan_and_sort (early version)
+- scan_and_sort_main (first solid version)
+- scan_and_sort_main_v1.5
+- scan_and_sort_main_v2.0
+- scan_and_sort_main_anaconda (Anaconda version)
+- scan_and_sort_main_co_pilot (AI-assisted version)
+
+Experimental / test builds:
+- mad_scientist_embeddings
+- mad_scientist_embeddings_v2
+- run_full_pipeline (early full pipeline attempt)
+
+CoPilot variants:
+- CoPilot_scan_and_sort
+- CoPilot_scan_and_sort_2
+
+---
 
 ## Requirements
+
 - Python 3.10+
 - LM Studio (or compatible local API)
 
-## How to run
+---
+
+## How to Run (Sorter)
+
 1. Configure paths in the script
 2. Start LM Studio
-3. Run: python scan_and_sort_main.py
+3. Run:
 
-(I added a bunch of my older and backup search files so you can mix and match to use whatever you want to make it yours.)
+```bash
+python scan_and_sort_main_v2.5.py
