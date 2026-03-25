@@ -12,6 +12,7 @@ This system scans large directories, classifies files using embeddings + LLMs, a
 
 It is designed for scale, efficiency, and reliability.
 
+arxiv_harvester.py <---------this is a script to go online and download scientific technical papers to go in the library
 ---
 
 ## 🔥 Core Features
