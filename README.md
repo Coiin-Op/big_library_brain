@@ -1,91 +1,129 @@
 # Large-Scale Library Sorter & AI Query System
 
-This project was built to catalogue and sort a 3.4 million file personal text library.
+A high-throughput, multi-model AI pipeline designed to organize and query massive unstructured text libraries.
 
-I built it to solve a real problem: organizing a massive, unstructured collection without having to manually sort everything.
-
-## Features
-Its a A High-throughput, multi-model, async AI classification pipeline
-with heuristic routing and real-time observability
-
-
-🧠 1. Intelligent decision pipeline
-⚡ 2. Cost-aware architecture
-🧩 3. Modular AI orchestration
-🔁 4. Streaming pipeline (not batch)
-🧠 5. Heuristic + AI hybrid system
-🔍 6. Observability
-⚡ 7. Parallel async execution
-🧬 8. Deduplication engine
-🧠 9. Self-improving system (partially there)
-🔥 10. Resource-aware engineering 
-🚀 11. scaling workload 
-🔥 12. Multi-model routing
-⚡ 13. Concurrency tuned
-📊 14. Progress + ETA
-💾 15. Disk-safe mode
-🧠 16. Embedding + duplicate detection
-
-It automatically:
-- scans large directories
-- extracts snippets from files (start, middle, end for better accuracy)
-- generates embeddings for classification
-- uses LLMs for fallback categorization
-- organizes files into structured folders
-- Async + batched processing
-- Cost-optimized AI usage
-- Duplicate detection
-- Resume-safe execution
-- Local LLM + embeddings support
-
-Designed for large-scale libraries (100k+ files) where manual sorting is not practical.
+Built to solve a real problem: automatically sorting a 3.4 million file personal library without manual effort.
 
 ---
 
-## Main Script
+## 🚀 Overview
 
-Use this file to run the sorter:
+This system scans large directories, classifies files using embeddings + LLMs, and organizes them into structured categories.
 
-- `scan_and_sort_main_v2.5`  ← **current main version**
-
-ChatGPT was used extensively during this project for debugging, design iteration, and refining the overall pipeline.
-
-## Script Evolution (for reference / experimentation)
-
-These are older or experimental versions if you want to explore or modify behavior:
-
-- book_sorter_v3 (earliest saved version)
-- book_sorter_v9 (best of first-gen scripts)
-- scan_and_sort (early version)
-- scan_and_sort_main (first solid version)
-- scan_and_sort_main_v1.5
-- scan_and_sort_main_v2.0
-- scan_and_sort_main_anaconda (Anaconda version)
-- scan_and_sort_main_co_pilot (AI-assisted version)
-
-Experimental / test builds:
-- mad_scientist_embeddings
-- mad_scientist_embeddings_v2
-- run_full_pipeline (early full pipeline attempt)
-
-CoPilot variants:
-- CoPilot_scan_and_sort
-- CoPilot_scan_and_sort_2
+It is designed for scale, efficiency, and reliability.
 
 ---
 
-## Requirements
+## 🔥 Core Features
+
+- ⚡ High-throughput async processing
+- 🧠 Embedding-based classification
+- 🤖 Multi-model LLM routing
+- 🔁 Streaming pipeline (not batch)
+- 🧬 Duplicate detection (semantic)
+- 📊 Real-time progress + ETA
+- 💾 Disk-safe execution mode
+- 🔍 Observability + debug visibility
+- ⚙️ Resource-aware (CPU / RAM / VRAM)
+- 🧠 Hybrid system (heuristics + AI)
+- 🔁 Resume-safe execution
+
+---
+
+## 🧠 System Design
+
+### Intelligent Pipeline
+- Embedding similarity → fast classification
+- LLM fallback for uncertain cases
+- Threshold-based decision routing
+
+### Cost-Aware Architecture
+- Avoids unnecessary LLM calls
+- Uses smaller models when possible
+
+### Modular AI Orchestration
+- Swap models without changing logic
+- Supports multiple local LLMs
+
+### Parallel Execution
+- Async processing with controlled concurrency
+- Optimized for large datasets
+
+---
+
+## ⚙️ What It Does
+
+- Scans large directories
+- Extracts text snippets (start, middle, end)
+- Generates embeddings
+- Detects duplicates
+- Classifies files into categories
+- Moves files into structured folders
+- Uses local LLMs for edge cases
+
+---
+
+## 📦 Scale
+
+Designed for:
+
+- 100k+ files (minimum)
+- Tested with 3.4 million files
+- Handles large datasets efficiently
+
+---
+
+## 🧪 Requirements
 
 - Python 3.10+
 - LM Studio (or compatible local API)
+- Local embedding model
 
 ---
 
-## How to Run (Sorter)
+## ▶️ How to Run
 
 1. Configure paths in the script
 2. Start LM Studio
 3. Run:
 
 ```bash
-python scan_and_sort_main_v2.5.py
+python scan_and_sort_main_v3.0.py
+
+## 🧠 System Architecture
+
+```mermaid
+flowchart TD
+
+    A[📥 Data Sources<br/>3.4M Files] --> B[⚡ Async Scanner]
+
+    B --> C[🧠 Snippet Extraction<br/>(start/middle/end)]
+    C --> D[🔢 Embeddings]
+
+    D --> E{🔍 Similarity Check}
+
+    E -->|High Confidence| F[📂 Direct Classification]
+    E -->|Low Confidence| G[🤖 LLM Routing]
+
+    G --> H[⚡ Fast Model (Qwen)]
+    G --> I[🪶 Small Model (Phi)]
+
+    H --> J[📁 Category Assigned]
+    I --> J
+
+    F --> J
+
+    J --> K[📦 Move File to Folder]
+
+    K --> L[🔁 Organized Library]
+
+    L --> M[🔍 Recoll Index]
+
+    M --> N[📊 Search Results]
+
+    N --> O[🧠 Context Builder]
+
+    O --> P[🤖 AI Reasoning]
+
+    P --> Q[💬 Answer + Sources]
+```
