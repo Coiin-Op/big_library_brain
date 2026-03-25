@@ -5,6 +5,26 @@ This project was built to catalogue and sort a 3.4 million file personal text li
 I built it to solve a real problem: organizing a massive, unstructured collection without having to manually sort everything.
 
 ## Features
+Its a A High-throughput, multi-model, async AI classification pipeline
+with heuristic routing and real-time observability
+
+
+🧠 1. Intelligent decision pipeline
+⚡ 2. Cost-aware architecture
+🧩 3. Modular AI orchestration
+🔁 4. Streaming pipeline (not batch)
+🧠 5. Heuristic + AI hybrid system
+🔍 6. Observability
+⚡ 7. Parallel async execution
+🧬 8. Deduplication engine
+🧠 9. Self-improving system (partially there)
+🔥 10. Resource-aware engineering 
+🚀 11. scaling workload 
+🔥 12. Multi-model routing
+⚡ 13. Concurrency tuned
+📊 14. Progress + ETA
+💾 15. Disk-safe mode
+🧠 16. Embedding + duplicate detection
 
 It automatically:
 - scans large directories
