@@ -93,6 +93,7 @@ python scan_and_sort_main_v3.0.py
 ## 🧠 System Architecture
 
 ```mermaid
+
 flowchart TD
 
     A[📥 Data Sources<br/>3.4M Files] --> B[⚡ Async Scanner]
